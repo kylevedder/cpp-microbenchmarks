@@ -28,7 +28,7 @@ using std::launch;
 using std::future;
 
 static const int kNumTrials = 1000;
-static const int kNumWorkerCalculations = 10000;
+static const int kNumWorkerCalculations = 50000;
 
 double GetMonotonicTime() {
   timespec ts;
