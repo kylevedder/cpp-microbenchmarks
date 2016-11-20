@@ -108,7 +108,7 @@ int main() {
     }
 
 
-    /* Free attribute and wait for the other threads */
+    // Free attribute and wait for the other threads
     pthread_attr_destroy(&attr);
     rc = pthread_join(thread, &status);
     if (rc) {
