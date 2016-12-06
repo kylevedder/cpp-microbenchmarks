@@ -14,7 +14,7 @@ information about optimization flags for [`g++`](https://wiki.gentoo.org/wiki/GC
 and [`clang++`](http://clang.llvm.org/docs/CommandGuide/clang.html#code-generation-options) to get
 a better understanding of the implications of these flags.
 
-###`g++` with `-O2` set:
+####`g++` with `-O2` set:
 
  Thread type         | Average Run Time (seconds)  |
  --------------------|:------------|
@@ -22,7 +22,7 @@ a better understanding of the implications of these flags.
  `std::async`        | 0.00413641  |
  `pthread`           | 0.00001201  |
 
-###`g++` with `-O3` set:
+####`g++` with `-O3` set:
 
  Thread type         | Average Run Time (seconds)  |
  --------------------|:------------|
@@ -30,7 +30,7 @@ a better understanding of the implications of these flags.
  `std::async`        | 0.00412404  |
  `pthread`           | 0.00001286  |
 
-###`g++` with `-Ofast` set (Breaks language compliance!):
+####`g++` with `-Ofast` set (Breaks language compliance!):
 
  Thread type         | Average Run Time (seconds)  |
  --------------------|:------------|
@@ -39,7 +39,7 @@ a better understanding of the implications of these flags.
  `pthread`           | 0.00001146  |
 
 
-###`clang++` with `-O2` set:
+####`clang++` with `-O2` set:
 
  Thread type         | Average Run Time (seconds)  |
  --------------------|:------------|
@@ -47,7 +47,7 @@ a better understanding of the implications of these flags.
  `std::async`        | 0.00453824  |
  `pthread`           | 0.00439311  |
 
-###`clang++` with `-O3` set:
+####`clang++` with `-O3` set:
 
  Thread type         | Average Run Time (seconds)  |
  --------------------|:------------|
@@ -55,7 +55,7 @@ a better understanding of the implications of these flags.
  `std::async`        | 0.00422098  |
  `pthread`           | 0.00417244  |
 
-###`clang++` with `-Ofast` set (Breaks language compliance!):
+####`clang++` with `-Ofast` set (Breaks language compliance!):
 
  Thread type         | Average Run Time (seconds)  |
  --------------------|:------------|
