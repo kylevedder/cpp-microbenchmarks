@@ -48,12 +48,13 @@ double worker_function_thread() {
 }
 
 // Takes care of joining the pthread().
-void* worker_function_pthread(void* t) {
+void* worker_function_pthread(void* vargp) {
   double answer = 0;
   for (int i = 0; i < kNumWorkerCalculations; ++i) {
     answer += sin(i) + tan(i);
   }
-  pthread_exit((void*) t);
+  *((double*)vargp) = 42;
+  pthread_exit(vargp);
 }
 
 int main() {
@@ -95,14 +96,14 @@ int main() {
     pthread_t thread;
     pthread_attr_t attr;
     int rc;
-    long t = 0;
-    void *status;
+    double t = 0;
+    void* status;
 
     // Initialize and set thread detached attribute
     pthread_attr_init(&attr);
     pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
 
-    rc = pthread_create(&thread, &attr, worker_function_pthread, (void *)t);
+    rc = pthread_create(&thread, &attr, worker_function_pthread, &t);
     if (rc) {
       cout << "ERROR; return code from pthread_create() is " << rc << "\n";
     }
