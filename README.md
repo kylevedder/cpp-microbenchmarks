@@ -8,7 +8,6 @@ All values are reported on an Intel® Core™ i5-5200U CPU @ 2.20GHz × 4 runnin
 using `g++` version `(Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609` and `clang++` 
 version `version 3.8.0-2ubuntu4 (tags/RELEASE_380/final)`.
 
-### Note on Optimization Flags:
 Here is a breakdown on the performance given each optimization level. You should read more 
 information about optimization flags for [`g++`](https://wiki.gentoo.org/wiki/GCC_optimization#-O) 
 and [`clang++`](http://clang.llvm.org/docs/CommandGuide/clang.html#code-generation-options) to get
