@@ -30,7 +30,7 @@ a better understanding of the implications of these flags.
  `std::async`        | 0.00412404  |
  `pthread`           | 0.00001286  |
 
-###`g++` with `-Ofast` set (Note that this breaks language compliance):
+###`g++` with `-Ofast` set (Breaks language compliance!):
 
  Thread type         | Average Run Time (seconds)  |
  --------------------|:------------|
@@ -55,7 +55,7 @@ a better understanding of the implications of these flags.
  `std::async`        | 0.00422098  |
  `pthread`           | 0.00417244  |
 
-###`clang++` with `-Ofast` set (Note that this breaks language compliance):
+###`clang++` with `-Ofast` set (Breaks language compliance!):
 
  Thread type         | Average Run Time (seconds)  |
  --------------------|:------------|
