@@ -1,6 +1,6 @@
 GPP = g++
 CLANG = clang++
-CFLAGS = --std=c++11 -Wall -g
+CFLAGS = --std=c++11 -Wall -Ofast -g
 ADDFLAGS = -lpthread
 OBJS = 
 
