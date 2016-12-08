@@ -3,61 +3,66 @@ Microbenchmakring of C++ 11 Standard Library
 
 Currently benchmarks `std::thread`, `std::async`, and `pthread` for both `g++` and `clang++`.
 
-## Benchmark Results:
-All values are reported on an Intel® Core™ i5-5200U CPU @ 2.20GHz × 4 running on Ubuntu 16.04.1 
-using `g++` version `(Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609` and `clang++` 
-version `version 3.8.0-2ubuntu4 (tags/RELEASE_380/final)`.
-
 Here is a breakdown on the performance given each optimization level. You should read more 
 information about optimization flags for [`g++`](https://wiki.gentoo.org/wiki/GCC_optimization#-O) 
 and [`clang++`](http://clang.llvm.org/docs/CommandGuide/clang.html#code-generation-options) to get
 a better understanding of the implications of these flags.
 
+## Benchmark Results:
+All benckmarks are compiled using `g++` version `(Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609` 
+and `clang++` version `version 3.8.0-2ubuntu4 (tags/RELEASE_380/final)`.
+
+Benckmarks are reported on two systems:
+ - i5 5200: Intel® Core™ i5-5200U CPU @ 2.20GHz × 4 running on Ubuntu 16.04.1
+ - i5 6300: Intel® Core™ i5-6300U CPU @ 2.40GHz × 4 running on Ubuntu 16.04.1
+
+All values are average run times in seconds.
+
 ####`g++` with `-O2` set:
 
- Thread type         | Average Run Time (seconds)  |
- --------------------|:------------|
- `std::thread`       | 0.00427142  |
- `std::async`        | 0.00413641  |
- `pthread`           | 0.00001201  |
+ Thread type         | i5 5200     | i5 6300     |
+ --------------------|:------------|:------------|
+ `std::thread`       | 0.00427142  | 0.00434303  |
+ `std::async`        | 0.00413641  | 0.00436270  |
+ `pthread`           | 0.00001201  | 0.00001146  |
 
 ####`g++` with `-O3` set:
 
- Thread type         | Average Run Time (seconds)  |
- --------------------|:------------|
- `std::thread`       | 0.00412891  |
- `std::async`        | 0.00412404  |
- `pthread`           | 0.00001286  |
+ Thread type         | i5 5200     | i5 6300     |
+ --------------------|:------------|:------------|
+ `std::thread`       | 0.00412891  | 0.00437466  |
+ `std::async`        | 0.00412404  | 0.00430873  |
+ `pthread`           | 0.00001286  | 0.00001124  |
 
 ####`g++` with `-Ofast` set (breaks language compliance):
 
- Thread type         | Average Run Time (seconds)  |
- --------------------|:------------|
- `std::thread`       | 0.00412911  |
- `std::async`        | 0.00412873  |
- `pthread`           | 0.00001146  |
+ Thread type         | i5 5200     | i5 6300     |
+ --------------------|:------------|:------------|
+ `std::thread`       | 0.00412911  | 0.00441190  |
+ `std::async`        | 0.00412873  | 0.00435164  |
+ `pthread`           | 0.00001146  | 0.00001107  |
 
 
 ####`clang++` with `-O2` set:
 
- Thread type         | Average Run Time (seconds)  |
- --------------------|:------------|
- `std::thread`       | 0.00413400  |
- `std::async`        | 0.00453824  |
- `pthread`           | 0.00439311  |
+ Thread type         | i5 5200     | i5 6300     |
+ --------------------|:------------|:------------|
+ `std::thread`       | 0.00413400  | 0.00438218  |
+ `std::async`        | 0.00453824  | 0.00441700  |
+ `pthread`           | 0.00439311  | 0.00427437  |
 
 ####`clang++` with `-O3` set:
 
- Thread type         | Average Run Time (seconds)  |
- --------------------|:------------|
- `std::thread`       | 0.00424165  |
- `std::async`        | 0.00422098  |
- `pthread`           | 0.00417244  |
+ Thread type         | i5 5200     | i5 6300     |
+ --------------------|:------------|:------------|
+ `std::thread`       | 0.00424165  | 0.00435809  |
+ `std::async`        | 0.00422098  | 0.00439395  |
+ `pthread`           | 0.00417244  | 0.00427716  |
 
 ####`clang++` with `-Ofast` set (breaks language compliance):
 
- Thread type         | Average Run Time (seconds)  |
- --------------------|:------------|
- `std::thread`       | 0.00415550  |
- `std::async`        | 0.00414783  |
- `pthread`           | 0.00001147  |
+ Thread type         | i5 5200     | i5 6300     |
+ --------------------|:------------|:------------|
+ `std::thread`       | 0.00415550  | 0.00444967  |
+ `std::async`        | 0.00414783  | 0.00433502  |
+ `pthread`           | 0.00001147  | 0.00001173  |
