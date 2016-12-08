@@ -9,12 +9,14 @@ and [`clang++`](http://clang.llvm.org/docs/CommandGuide/clang.html#code-generati
 a better understanding of the implications of these flags.
 
 ## Benchmark Results:
-All benckmarks are compiled using `g++` version `(Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609` 
-and `clang++` version `version 3.8.0-2ubuntu4 (tags/RELEASE_380/final)`.
 
 Benckmarks are reported on two systems:
  - **i5 5200**: Intel® Core™ i5-5200U CPU @ 2.20GHz × 4 running on Ubuntu 16.04.1
+   - `g++` version `(Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609`
+   - `clang++` version `version 3.8.0-2ubuntu4 (tags/RELEASE_380/final)`
  - **i5 6300**: Intel® Core™ i5-6300U CPU @ 2.40GHz × 4 running on Ubuntu 16.04.1
+   - `g++` version `(Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609`
+   - `clang++` version `version 3.8.0-2ubuntu4 (tags/RELEASE_380/final)`
 
 All values are average run times in seconds. Please note that times fluctuate between runs and 
 thus should be treated as ballpark estimates rather than exact numbers.
