@@ -16,7 +16,8 @@ Benckmarks are reported on two systems:
  - i5 5200: Intel® Core™ i5-5200U CPU @ 2.20GHz × 4 running on Ubuntu 16.04.1
  - i5 6300: Intel® Core™ i5-6300U CPU @ 2.40GHz × 4 running on Ubuntu 16.04.1
 
-All values are average run times in seconds.
+All values are average run times in seconds. Please note that times fluctuate between runs and 
+thus should be treated as ballpark estimates rather than exact numbers.
 
 ####`g++` with `-O2` set:
 
