@@ -20,12 +20,16 @@
 #include <pthread.h>
 #include <unistd.h>
 #include <math.h>
+#include <map>
+#include <vector>
 
 using std::cout;
 using std::thread;
 using std::async;
 using std::launch;
 using std::future;
+using std::map;
+using std::vector;
 
 static const int kNumTrials = 1000;
 static const int kNumWorkerCalculations = 50000;
@@ -120,6 +124,48 @@ int main() {
   }
   cout << "pthread benchmark done!\n";
   cout << "pthread average time: \t\t" << total_delta / static_cast<double>(kNumTrials)
+       << "\n";
+
+  // std::vector
+  total_delta = 0;
+  cout << "\033[1;34mStarting vector benchmark\033[0;0m\n";
+  vector<int> vector;
+  vector.push_back(0);
+  vector.push_back(1);
+  vector.push_back(2);
+  vector.push_back(3);
+  vector.push_back(4);
+  int sum = 0;
+  for (int i = 0; i < kNumTrials; ++i) {
+    double start_time = GetMonotonicTime();
+    int value = vector[3];
+    sum += value;
+    double end_time = GetMonotonicTime();
+    total_delta += end_time - start_time;
+  }
+  cout << "vector benchmark done!\n";
+  cout << "vector average time: \t\t" << total_delta / static_cast<double>(kNumTrials)
+       << "\n";
+
+  // std::map
+  total_delta = 0;
+  cout << "\033[1;34mStarting vector benchmark\033[0;0m\n";
+  map<int, int> map;
+  map.insert(std::pair<int, int>(0, 0));
+  map.insert(std::pair<int, int>(1, 1));
+  map.insert(std::pair<int, int>(2, 2));
+  map.insert(std::pair<int, int>(3, 3));
+  map.insert(std::pair<int, int>(4, 4));
+  sum = 0;
+  for (int i = 0; i < kNumTrials; ++i) {
+    double start_time = GetMonotonicTime();
+    int value = map[3];
+    sum += value;
+    double end_time = GetMonotonicTime();
+    total_delta += end_time - start_time;
+  }
+  cout << "map benchmark done!\n";
+  cout << "map average time: \t\t" << total_delta / static_cast<double>(kNumTrials)
        << "\n";
 }
 

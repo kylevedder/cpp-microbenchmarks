@@ -28,6 +28,8 @@ thus should be treated as ballpark estimates rather than exact numbers.
  `std::thread`       | 0.00427142  | 0.00434303  |
  `std::async`        | 0.00413641  | 0.00436270  |
  `pthread`           | 0.00001201  | 0.00001146  |
+ `std::vector`       | 0.0000000239  |           |
+ `std::map`          | 0.0000000262  |           |
 
 ####`g++` with `-O3` set:
 
@@ -36,6 +38,8 @@ thus should be treated as ballpark estimates rather than exact numbers.
  `std::thread`       | 0.00412891  | 0.00437466  |
  `std::async`        | 0.00412404  | 0.00430873  |
  `pthread`           | 0.00001286  | 0.00001124  |
+ `std::vector`       | 0.0000000253  |           |
+ `std::map`          | 0.0000000263  |           |
 
 ####`g++` with `-Ofast` set (breaks language compliance):
 
@@ -44,6 +48,8 @@ thus should be treated as ballpark estimates rather than exact numbers.
  `std::thread`       | 0.00412911  | 0.00441190  |
  `std::async`        | 0.00412873  | 0.00435164  |
  `pthread`           | 0.00001146  | 0.00001107  |
+ `std::vector`       | 0.0000000231  |           |
+ `std::map`          | 0.0000000581  |           |
 
 
 ####`clang++` with `-O2` set:
@@ -53,6 +59,8 @@ thus should be treated as ballpark estimates rather than exact numbers.
  `std::thread`       | 0.00413400  | 0.00438218  |
  `std::async`        | 0.00453824  | 0.00441700  |
  `pthread`           | 0.00439311  | 0.00427437  |
+ `std::vector`       | 0.0000000441  |           |
+ `std::map`          | 0.0000000445  |           |
 
 ####`clang++` with `-O3` set:
 
@@ -61,6 +69,8 @@ thus should be treated as ballpark estimates rather than exact numbers.
  `std::thread`       | 0.00424165  | 0.00435809  |
  `std::async`        | 0.00422098  | 0.00439395  |
  `pthread`           | 0.00417244  | 0.00427716  |
+ `std::vector`       | 0.0000000258  |           |
+ `std::map`          | 0.0000000615  |           |
 
 ####`clang++` with `-Ofast` set (breaks language compliance):
 
@@ -69,3 +79,5 @@ thus should be treated as ballpark estimates rather than exact numbers.
  `std::thread`       | 0.00415550  | 0.00444967  |
  `std::async`        | 0.00414783  | 0.00433502  |
  `pthread`           | 0.00001147  | 0.00001173  |
+ `std::vector`       | 0.0000000229  |           |
+ `std::map`          | 0.0000000310  |           |
