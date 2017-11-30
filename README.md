@@ -21,7 +21,7 @@ Benckmarks are reported on two systems:
 All values are average run times in seconds. Please note that times fluctuate between runs and 
 thus should be treated as ballpark estimates rather than exact numbers.
 
-####`g++` with `-O2` set:
+#### `g++` with `-O2` set:
 
  Thread type         | i5 5200     | i5 6300     |
  --------------------|:------------|:------------|
@@ -31,7 +31,7 @@ thus should be treated as ballpark estimates rather than exact numbers.
  `std::vector`       |   | 0.0000000239          |
  `std::map`          |   | 0.0000000262          |
 
-####`g++` with `-O3` set:
+#### `g++` with `-O3` set:
 
  Thread type         | i5 5200     | i5 6300     |
  --------------------|:------------|:------------|
@@ -41,7 +41,7 @@ thus should be treated as ballpark estimates rather than exact numbers.
  `std::vector`       |   | 0.0000000253          |
  `std::map`          |   | 0.0000000263          |
 
-####`g++` with `-Ofast` set (breaks language compliance):
+#### `g++` with `-Ofast` set (breaks language compliance):
 
  Thread type         | i5 5200     | i5 6300     |
  --------------------|:------------|:------------|
@@ -52,7 +52,7 @@ thus should be treated as ballpark estimates rather than exact numbers.
  `std::map`          |   | 0.0000000581          |
 
 
-####`clang++` with `-O2` set:
+#### `clang++` with `-O2` set:
 
  Thread type         | i5 5200     | i5 6300     |
  --------------------|:------------|:------------|
@@ -62,7 +62,7 @@ thus should be treated as ballpark estimates rather than exact numbers.
  `std::vector`       |   | 0.0000000441          |
  `std::map`          |   | 0.0000000445          |
 
-####`clang++` with `-O3` set:
+#### `clang++` with `-O3` set:
 
  Thread type         | i5 5200     | i5 6300     |
  --------------------|:------------|:------------|
@@ -72,7 +72,7 @@ thus should be treated as ballpark estimates rather than exact numbers.
  `std::vector`       |   | 0.0000000258          |
  `std::map`          |   | 0.0000000615          |
 
-####`clang++` with `-Ofast` set (breaks language compliance):
+#### `clang++` with `-Ofast` set (breaks language compliance):
 
  Thread type         | i5 5200     | i5 6300     |
  --------------------|:------------|:------------|
